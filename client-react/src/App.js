@@ -316,10 +316,9 @@ const App = () => {
   useEffect(() => {
     if (walletAddress) {
       console.log('Fetching GIF list...');
-      // eslint-disable-next-line react-hooks/exhaustive-deps
       getGifList()
     }
-  }, [walletAddress]);
+  }, [walletAddress]);  // eslint-disable-line react-hooks/exhaustive-deps
 
   return (
     <div className="App">
