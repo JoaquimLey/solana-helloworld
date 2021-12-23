@@ -194,7 +194,7 @@ const App = () => {
             {/* We use index as the key instead, also, the src is now item.gifLink */}
             {gifList.map((item, index) => (
               <div className="gif-item" key={index}>
-                <img src={item.gifLink} alt="Gif image" />
+                <img src={item.gifLink} alt="Gif element" />
                 <p className="footer-text"><span>Address: </span>{item.userAddress.toString()} </p>
 
                 <div className='gif-item-votes-container'>
@@ -316,6 +316,7 @@ const App = () => {
   useEffect(() => {
     if (walletAddress) {
       console.log('Fetching GIF list...');
+      // eslint-disable-next-line react-hooks/exhaustive-deps
       getGifList()
     }
   }, [walletAddress]);
